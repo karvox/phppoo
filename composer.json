@@ -1,0 +1,21 @@
+{
+    "name": "judsonab/phppoo",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        },
+        "files": [
+            
+        ]
+    },
+    "authors": [
+        {
+            "name": "Judson Borges",
+            "email": "judsonborges@ect.ufrn.br"
+        }
+    ],
+    "require": {
+        "league/plates": "^3.4",
+        "symfony/var-dumper": "^6.1"
+    }
+}
