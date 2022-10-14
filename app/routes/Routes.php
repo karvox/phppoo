@@ -4,12 +4,13 @@ namespace app\routes;
 
 class Routes
 {
-    public function get()
+    public static function get()
     {
         return [
             'get'  => [
                 '/' => 'HomeController@index',
-                '/user/[a-zA-Z]' => 'RegisterController@store'
+                '/user/[0-9]+' => 'UserController@index',
+                '/register' => 'RegisterController@store'
             ],
             'post' => []
         ];
