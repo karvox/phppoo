@@ -2,10 +2,13 @@
 
 namespace app\controllers;
 
-class HomeController
+use League\Plates\Engine;
+
+class HomeController extends Controller
 {
-    public function index()
+    public function index($params)
     {
-        dd('Index Home Controller');
+        $templates = new Engine('../app/views');
+        echo $templates->render('home', ['name' => 'Página Index', 'title' => 'Página do inicial']);
     }
 }
