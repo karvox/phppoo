@@ -2,10 +2,13 @@
 
 namespace app\controllers;
 
-class UserController
+use League\Plates\Engine;
+
+class UserController extends Controller
 {
     public function edit($params)
     {
-        dd($params);
+        $templates = new Engine('../app/views');
+        echo $templates->render('user', ['name' => 'Judson', 'title' => 'Página do user']);
     }
 }
