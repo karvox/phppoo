@@ -13,8 +13,8 @@ class Router
             $controller = new Controller;
             $controller->execute($router);
 
-        } catch (\Throwable $th){
-            echo $th->getMessage();
+        } catch (\Throwable $e){
+            echo $e->getMessage();
         }
         
 
