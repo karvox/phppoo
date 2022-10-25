@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use Exception;
+
 class Request
 {
     public static function input(string $name)
@@ -9,6 +11,8 @@ class Request
         if(isset($_POST[$name])){
             return $_POST[$name];
         }
+
+        throw new Exception("O índice {$name} não existe.");
     }
 
     public static function all()
@@ -16,10 +20,11 @@ class Request
         return $_POST;
     }
 
-    public static function name()
+    public static function only(string|array $only)
     {
-        
+        $fieldsPost = self::all();
+        $fieldsPostKeys = array_keys($fieldsPost);
+        dd($fieldsPostKeys);
     }
-
     
 }
