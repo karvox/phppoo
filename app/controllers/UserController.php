@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\core\Request;
 use League\Plates\Engine;
 
 class UserController extends Controller
@@ -10,5 +11,12 @@ class UserController extends Controller
     {
         $templates = new Engine('../app/views');
         echo $templates->render('user', ['name' => 'Judson', 'title' => 'Página do user']);
+
+        //$this->view('user', ['title' => 'Editar usuário']);
+    }
+
+    public function update($params)
+    {
+        dd($params);
     }
 }
